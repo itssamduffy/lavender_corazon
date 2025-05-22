@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Duffy | Writer & Artist</title>
+    <meta name="description" content="The personal portfolio and blog of Sam Duffy, exploring literature, digital culture, and queer theory.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon"> 
+    </head>
+<body data-theme="light"> <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="main-header" role="banner">
+        <div class="header-content">
+            <div class="logo">
+                <a href="#">Sam Duffy</a>
+            </div>
+            <nav role="navigation" aria-label="Main Navigation">
+                <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#entries">Un/bound</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="content-column" role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <div class="section-content">
+                <p>
+                    Sam Duffy is a letterpress printer, poet, and writer based in the Bay Area. Their work blends traditional craft methods with contemporary reflections on identity and belonging. You can read their writings on craft below, as <i>Un/bound</i>.
+                </p>
+                <p> 
+                    With Rune Soto Ponce, they co-run Lavender Corazón Press, a micro-press centering queer and Latine voices, often paired with visual accompaniment.
+                </p>
+            </div>
+        </section>
+
+        <section id="entries" aria-labelledby="entries-heading">
+            <h2 id="entries-heading">Un/bound</h2>
+            <div id="entries-container" class="section-content">
+                <div class="loading-message" aria-live="polite">Loading entries...</div>
+            </div>
+        </section>
+
+        <section id="cv" aria-labelledby="cv-heading">
+            <h2 id="cv-heading">CV</h2>
+            <div class="section-content">
+                <p>
+                    My curriculum vitae is available for download. It provides a comprehensive overview of my academic background, 
+                    publications, exhibitions, and relevant experience.
+                </p>
+                <a href="assets/sam_duffy_cv.pdf.pdf" target="_blank" rel="noopener noreferrer" class="button">
+                    Download CV <span class="sr-only">(opens in a new tab, PDF format)</span>
+                </a>
+                <p class="small-note">
+                
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <div class="section-content">
+                <p>For inquiries, collaborations, or to simply connect, please use the form below or email me directly at <a href="mailto:altforduffy@gmail.com">altforduffy@gmail.com</a>.</p>
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+                <div id="form-feedback" class="form-feedback" aria-live="assertive" style="display:none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; <span id="current-year"></span> Sam Duffy. All rights reserved.</p>
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
