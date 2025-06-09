@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sam Duffy | Lavender Corazón Press</title>
+    <meta name="description" content="The personal portfolio and blog of Sam Duffy, exploring literature, digital culture, and queer theory.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body data-theme="light" class="portfolio-page sam-duffy-page">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="main-header" role="banner">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">Lavender Corazón</a>
+            </div>
+            <nav role="navigation" aria-label="Main Navigation">
+                <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="index.html#about-press">About the Press</a></li>
+                    <li><a href="sam-duffy.html" class="current-page">Sam Duffy</a></li>
+                    <li><a href="rune-soto-ponce.html">Rune Soto Ponce</a></li>
+                    <li><a href="index.html#contact-press">Contact Press</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="content-column" role="main">
+        <section id="portfolio-intro-sam" class="portfolio-intro" aria-labelledby="portfolio-sam-heading">
+            <h1 id="portfolio-sam-heading">Sam Duffy</h1>
+            <p class="portfolio-tagline">Writer & Artist</p>
+        </section>
+
+        <section id="about" aria-labelledby="about-sam-heading">
+            <h2 id="about-sam-heading">About Sam</h2>
+            <div class="section-content">
+                <p>
+                    Sam Duffy is a writer and artist exploring the intersections of literature, digital culture, and queer theory. 
+                    Their work seeks to find the poetic in the mundane and the critical in the aesthetic.
+                </p>
+                <p> 
+                    With a background in comparative literature and a keen interest in analog forms, Sam's reflections often bridge 
+                    the gap between the historical and the contemporary, offering nuanced perspectives on art, life, and 
+                    the spaces in between.
+                </p>
+            </div>
+        </section>
+
+        <section id="entries" aria-labelledby="entries-sam-heading">
+            <h2 id="entries-sam-heading">Entries</h2>
+            <div id="entries-container-sam" class="section-content entries-container">
+                <div class="loading-message" aria-live="polite">Loading entries...</div>
+            </div>
+        </section>
+
+        <section id="cv" aria-labelledby="cv-sam-heading">
+            <h2 id="cv-sam-heading">CV</h2>
+            <div class="section-content">
+                <p>
+                    My curriculum vitae is available for download. It provides a comprehensive overview of my academic background, 
+                    publications, exhibitions, and relevant experience.
+                </p>
+                <a href="assets/cv/sam_duffy_cv.pdf" target="_blank" rel="noopener noreferrer" class="button">
+                    Download Sam Duffy's CV <span class="sr-only">(opens in a new tab, PDF format)</span>
+                </a>
+                </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-sam-heading">
+            <h2 id="contact-sam-heading">Contact Sam</h2>
+            <div class="section-content">
+                <p>For inquiries related to Sam Duffy's work, please use the form below or email directly at <a href="mailto:altforduffy@gmail.com">altforduffy@gmail.com</a>.</p>
+                <form id="contact-form-sam" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name-sam">Name</label>
+                        <input type="text" id="name-sam" name="name" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-sam">Email</label>
+                        <input type="email" id="email-sam" name="email" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-sam">Message</label>
+                        <textarea id="message-sam" name="message" rows="6" required aria-required="true"></textarea>
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="button">Send Message to Sam</button>
+                </form>
+                <div id="form-feedback-sam" class="form-feedback" aria-live="assertive" style="display:none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p><a href="index.html">Lavender Corazón Press</a> | &copy; <span id="current-year"></span> Sam Duffy. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

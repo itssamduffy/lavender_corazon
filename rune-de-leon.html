@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rune de León | Lavender Corazón Press</title>
+    <meta name="description" content="The personal portfolio of Rune de León, showcasing poetry, visual arts, and explorations of heritage.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body data-theme="light" class="portfolio-page rune-de-leon-page">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="main-header" role="banner">
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">Lavender Corazón</a>
+            </div>
+            <nav role="navigation" aria-label="Main Navigation">
+                <button id="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                    <span class="sr-only">Toggle Menu</span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="index.html#about-press">About the Press</a></li>
+                    <li><a href="sam-duffy.html">Sam Duffy</a></li>
+                    <li><a href="rune-soto-ponce.html" class="current-page">Rune de León</a></li>
+                    <li><a href="index.html#contact-press">Contact Press</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="content-column" role="main">
+        <section id="portfolio-intro-rune" class="portfolio-intro" aria-labelledby="portfolio-rune-heading">
+            <h1 id="portfolio-rune-heading">Rune de León</h1>
+            <p class="portfolio-tagline">Illustrator</p>
+        </section>
+
+        <section id="about-rune" aria-labelledby="about-rune-heading">
+            <h2 id="about-rune-heading">About Rune</h2>
+            <div class="section-content">
+                <p>
+                    Rune de León is an illustrator whose work delves into themes of heritage, memory, and the liminal spaces 
+                    between cultures. His practice often combines textual and visual elements, exploring the expressive potential of form and material.
+                </p>
+                <p>
+                    With a focus on lyrical intensity and evocative imagery, Rune's creations invite contemplation and connection. 
+                    He is interested in how art can articulate the unspoken and bridge personal narratives with collective experiences.
+                </p>
+                </div>
+        </section>
+
+        <section id="cv-rune" aria-labelledby="cv-rune-heading">
+            <h2 id="cv-rune-heading">CV / Bio</h2>
+            <div class="section-content">
+                <p>
+                    A detailed artist biography and curriculum vitae for Rune de León is available for download.
+                </p>
+                <a href="assets/cv/rune_soto_ponce_cv.pdf" target="_blank" rel="noopener noreferrer" class="button">
+                    Download Rune's CV/Bio <span class="sr-only">(opens in a new tab, PDF format)</span>
+                </a>
+                </div>
+        </section>
+
+        <section id="contact-rune" aria-labelledby="contact-rune-heading">
+            <h2 id="contact-rune-heading">Contact Rune</h2>
+            <div class="section-content">
+                <p>To connect with Rune de León regarding his work or potential collaborations, please use the form or email <a href="mailto:rune@lavendercorazon.com">rune@lavendercorazon.com</a>.</p>
+                <form id="contact-form-rune" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name-rune">Name</label>
+                        <input type="text" id="name-rune" name="name" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-rune">Email</label>
+                        <input type="email" id="email-rune" name="email" required aria-required="true">
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-rune">Message</label>
+                        <textarea id="message-rune" name="message" rows="6" required aria-required="true"></textarea>
+                        <span class="error-message" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="button">Send Message to Rune</button>
+                </form>
+                <div id="form-feedback-rune" class="form-feedback" aria-live="assertive" style="display:none;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p><a href="index.html">Lavender Corazón Press</a> | &copy; <span id="current-year"></span> Rune de León. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
