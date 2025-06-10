@@ -6,23 +6,5 @@
             "imageUrl": "https://substackcdn.com/image/fetch/w_320,h_213,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85d69b15-9ee4-47fa-8e84-c48f82aa0c24_4032x3024.png",
             "substackUrl": "https://unslashbound.substack.com/p/some-marginalia"
         },
-        {
-            "title": "The Analog Allure in a Digital Age",
-            "excerpt": "A deep dive into why analog technologies like vinyl, film photography, and print continue to captivate us. Is it nostalgia, or something more profound?",
-            "imageUrl": "https://placehold.co/400x300/dcdcdc/555?text=Analog+Charm",
-            "substackUrl": "https://yoursubstack.substack.com/p/your-post-slug-2"
-        },
-        {
-            "title": "Queer Archives & Narrative Power",
-            "excerpt": "Considering the role of archiving in queer communities and how controlling our narratives shapes identity and resistance. The importance of untold stories.",
-            "imageUrl": "https://placehold.co/400x300/f0f0f0/777?text=Queer+History",
-            "substackUrl": "https://yoursubstack.substack.com/p/your-post-slug-3"
-        },
-        {
-            "title": "Literary Minimalism: Saying More with Less",
-            "excerpt": "An examination of minimalist aesthetics in literature. How sparse prose and focused imagery can create powerful emotional and intellectual resonance.",
-            "imageUrl": "https://placehold.co/400x300/e0e0e0/444?text=Minimal+Text",
-            "substackUrl": "https://yoursubstack.substack.com/p/your-post-slug-4"
-        }
     ]
 }
