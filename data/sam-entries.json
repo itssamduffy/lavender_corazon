@@ -1,8 +1,14 @@
 {
     "entries": [
         {
+            "title": "Fragments of Spring",
+            "excerpt": "In 2023, I was hopeful.",
+            "imageUrl": "https://substackcdn.com/image/fetch/w_96,h_96,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0e6fb880-fccb-4185-afa3-70c77d9e3913_4032x3024.png",
+            "substackUrl": "https://unslashbound.substack.com/p/fragments-of-spring?r=2yljj1"
+        },
+        {
             "title": "Some Marginalia",
-            "excerpt": "In the spring of 2023, while finishing my English degree at UC Berkeley, I took a course that shifted the way I view the...",
+            "excerpt": "while finishing my English degree at UC Berkeley, I took a course that shifted the way I view the...",
             "imageUrl": "https://substackcdn.com/image/fetch/w_320,h_213,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85d69b15-9ee4-47fa-8e84-c48f82aa0c24_4032x3024.png",
             "substackUrl": "https://unslashbound.substack.com/p/some-marginalia"
         }
