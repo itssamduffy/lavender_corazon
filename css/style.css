@@ -3,7 +3,7 @@
     --font-primary: 'Work Sans', sans-serif;
     --font-secondary: 'Libre Baskerville', serif;
 
-    /* Core Palette - Fine Press Feel */
+    /* Core Palette */
     --color-text: #333333; /* Dark gray for readability */
     --color-text-light: #666666;
     --color-heading: #1a1a1a; /* Near black for strong headings */
@@ -17,11 +17,10 @@
     --color-error: #c94c4c;
     --color-success: #4CAF50;
 
-    /* Lavender Motif - Primarily for non-text accents now */
+    /* Lavender Motifs */
     --color-lavender-deep: #6A5ACD; 
     --color-lavender-medium: #9370DB; 
     --color-lavender-light: #E6E6FA; 
-    /* --color-lavender-text-accent: var(--color-lavender-deep); -- No longer primary for text */
 
     --header-height: 75px;
     --max-width-content: 840px; 
