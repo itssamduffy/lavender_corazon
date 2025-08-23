@@ -364,3 +364,30 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 @media print { body { padding-top: 0; background-color: var(--color-white); color: #000; } #main-header, footer, .contact-form button, .button, #menu-toggle { display: none; } .content-column, section { border: none; margin: 0; padding: 0; box-shadow: none; opacity: 1; transform: none; } a { color: #000; text-decoration: underline; } a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; } .entries-container .entry-preview img { max-width: 150px; } section h2::after { background-color: #000; } }
 
 
+
+/* Harmonize spacing around the portrait bridge */
+:root{
+  --bridge-gap-top: 12px;    /* subtitle → circle */
+  --bridge-gap-bottom: 22px; /* circle → “About …” */
+}
+
+/* Kill the big bottom padding on the intro section */
+#portfolio-intro-sam,
+#portfolio-intro-rune { padding-bottom: 0; }
+
+/* Tighten subtitle → circle */
+.portfolio-tagline { margin-bottom: var(--bridge-gap-top); }
+
+/* Circle’s own spacing */
+.profile-bridge { margin: 0 auto var(--bridge-gap-bottom); }
+
+/* Tighten circle → About section */
+#about-sam,
+#about-rune { padding-top: var(--bridge-gap-bottom); }
+
+@media (max-width: 600px){
+  :root{
+    --bridge-gap-top: 10px;
+    --bridge-gap-bottom: 16px;
+  }
+}
