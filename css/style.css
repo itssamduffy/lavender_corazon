@@ -204,10 +204,10 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 
 .card-hero img {
   display: block;
-  width: 100%;
-  height: auto;               /* keep original aspect ratio */
-  /* object-fit: contain;     <- not needed with height:auto */
-  /* border-radius: 16px;     <- remove; handled by container */
+  max-height: 30vh;   /* cap tallest image to ~30% of viewport height */
+  width: auto;        /* keep width in proportion */
+  height: auto;
+  margin: 0 auto;     /* center horizontally if narrower than card */
 }
 
 .card-caption {
