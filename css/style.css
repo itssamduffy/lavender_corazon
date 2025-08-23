@@ -364,28 +364,43 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 @media print { body { padding-top: 0; background-color: var(--color-white); color: #000; } #main-header, footer, .contact-form button, .button, #menu-toggle { display: none; } .content-column, section { border: none; margin: 0; padding: 0; box-shadow: none; opacity: 1; transform: none; } a { color: #000; text-decoration: underline; } a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; } .entries-container .entry-preview img { max-width: 150px; } section h2::after { background-color: #000; } }
 
 
-
 /* --- Normalize intro ↔ bridge ↔ about spacing on both pages --- */
 :root{
-  --bridge-gap-top: 10px;     /* subtitle → circle */
-  --bridge-gap-bottom: 18px;  /* circle → About heading */
+  --bridge-gap-top: 6px;      /* subtitle → circle (tighter) */
+  --bridge-gap-bottom: 28px;  /* circle → About heading (looser) */
 }
 
 /* same avatar size on both unless you intentionally differ */
 .sam-duffy-page .profile-bridge,
-.rune-de-leon-page .profile-bridge { --avatar-size: 200px; }
+.rune-de-leon-page .profile-bridge {
+  --avatar-size: 200px;
+}
 
 /* remove big default bottom padding from the intro section */
 #portfolio-intro-sam,
-#portfolio-intro-rune { padding-bottom: 0; }
+#portfolio-intro-rune {
+  padding-bottom: 0;
+}
 
 /* tighten subtitle → circle */
-.portfolio-tagline { margin-bottom: var(--bridge-gap-top); }
+.portfolio-tagline {
+  margin-bottom: var(--bridge-gap-top);
+}
 
-/* circle’s own spacing */
-.profile-bridge { margin: 0 auto var(--bridge-gap-bottom); }
+/* circle’s own spacing, nudged up */
+.profile-bridge {
+  margin: -8px auto var(--bridge-gap-bottom);   /* negative top pulls closer to subtitle */
+}
+
+/* optional per-page fine-tuning if needed */
+.sam-duffy-page .profile-bridge { margin-top: -10px; }
+.rune-de-leon-page .profile-bridge { margin-top: -6px; }
 
 /* tighten circle → About */
 #about-sam,
-#about-rune { padding-top: 0; margin-top: var(--bridge-gap-bottom); }
+#about-rune {
+  padding-top: 0;
+  margin-top: var(--bridge-gap-bottom);
+}
+
 
