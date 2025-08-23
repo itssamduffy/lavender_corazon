@@ -365,29 +365,27 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 
 
 
-/* Harmonize spacing around the portrait bridge */
+/* --- Normalize intro ↔ bridge ↔ about spacing on both pages --- */
 :root{
-  --bridge-gap-top: 12px;    /* subtitle → circle */
-  --bridge-gap-bottom: 22px; /* circle → “About …” */
+  --bridge-gap-top: 10px;     /* subtitle → circle */
+  --bridge-gap-bottom: 18px;  /* circle → About heading */
 }
 
-/* Kill the big bottom padding on the intro section */
+/* same avatar size on both unless you intentionally differ */
+.sam-duffy-page .profile-bridge,
+.rune-de-leon-page .profile-bridge { --avatar-size: 200px; }
+
+/* remove big default bottom padding from the intro section */
 #portfolio-intro-sam,
 #portfolio-intro-rune { padding-bottom: 0; }
 
-/* Tighten subtitle → circle */
+/* tighten subtitle → circle */
 .portfolio-tagline { margin-bottom: var(--bridge-gap-top); }
 
-/* Circle’s own spacing */
+/* circle’s own spacing */
 .profile-bridge { margin: 0 auto var(--bridge-gap-bottom); }
 
-/* Tighten circle → About section */
+/* tighten circle → About */
 #about-sam,
-#about-rune { padding-top: var(--bridge-gap-bottom); }
+#about-rune { padding-top: 0; margin-top: var(--bridge-gap-bottom); }
 
-@media (max-width: 600px){
-  :root{
-    --bridge-gap-top: 10px;
-    --bridge-gap-bottom: 16px;
-  }
-}
