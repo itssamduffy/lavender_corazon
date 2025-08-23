@@ -425,8 +425,3 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
     margin-top: -4px;               /* was -10px; reduce to avoid collision */
     margin-bottom: var(--bridge-gap-bottom);
   }
-
-  /* If it’s still tight, also shrink the avatar a touch: */
-  /* .sam-duffy-page .profile-bridge,
-     .rune-de-leon-page .profile-bridge { --avatar-size: 180px; } */
-}
