@@ -364,43 +364,50 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 @media print { body { padding-top: 0; background-color: var(--color-white); color: #000; } #main-header, footer, .contact-form button, .button, #menu-toggle { display: none; } .content-column, section { border: none; margin: 0; padding: 0; box-shadow: none; opacity: 1; transform: none; } a { color: #000; text-decoration: underline; } a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; } .entries-container .entry-preview img { max-width: 150px; } section h2::after { background-color: #000; } }
 
 
-/* --- Normalize intro ↔ bridge ↔ about spacing on both pages --- */
+/* --- Normalize intro ↔ bridge ↔ about (Sam = Rune) --- */
 :root{
-  --bridge-gap-top: 6px;      /* subtitle → circle (tighter) */
-  --bridge-gap-bottom: 28px;  /* circle → About heading (looser) */
+  --bridge-gap-top: 6px;      /* subtitle → circle */
+  --bridge-gap-bottom: 28px;  /* circle → About heading */
 }
 
-/* same avatar size on both unless you intentionally differ */
+/* same size + same vertical nudge on both pages */
 .sam-duffy-page .profile-bridge,
-.rune-de-leon-page .profile-bridge {
+.rune-de-leon-page .profile-bridge{
   --avatar-size: 200px;
+  margin-top: -10px;                      /* pull circle closer to subtitle */
+  margin-bottom: var(--bridge-gap-bottom);
 }
 
-/* remove big default bottom padding from the intro section */
+/* remove default bottom padding from the intro sections */
 #portfolio-intro-sam,
-#portfolio-intro-rune {
+#portfolio-intro-rune{
   padding-bottom: 0;
 }
 
-/* tighten subtitle → circle */
-.portfolio-tagline {
+/* subtitle → circle spacing */
+.portfolio-tagline{
   margin-bottom: var(--bridge-gap-top);
 }
 
-/* circle’s own spacing, nudged up */
-.profile-bridge {
-  margin: -8px auto var(--bridge-gap-bottom);   /* negative top pulls closer to subtitle */
-}
-
-/* optional per-page fine-tuning if needed */
-.sam-duffy-page .profile-bridge { margin-top: -10px; }
-.rune-de-leon-page .profile-bridge { margin-top: -6px; }
-
-/* tighten circle → About */
+/* circle → About spacing */
 #about-sam,
-#about-rune {
+#about-rune{
   padding-top: 0;
   margin-top: var(--bridge-gap-bottom);
 }
 
-
+/* enforce identical circle geometry on both pages */
+.sam-duffy-page .profile-avatar,
+.rune-de-leon-page .profile-avatar{
+  width: var(--avatar-size);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sam-duffy-page .profile-avatar img,
+.rune-de-leon-page .profile-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
