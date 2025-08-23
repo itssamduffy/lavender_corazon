@@ -411,3 +411,22 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   object-fit: cover;
   display: block;
 }
+
+/* --- Mobile spacing: keep the circle from overlapping the About heading --- */
+@media (max-width: 640px){
+  :root{
+    --bridge-gap-top: 8px;          /* subtitle → circle */
+    --bridge-gap-bottom: 44px;      /* circle → About (more space on phones) */
+  }
+
+  /* ease the upward nudge on phones */
+  .sam-duffy-page .profile-bridge,
+  .rune-de-leon-page .profile-bridge{
+    margin-top: -4px;               /* was -10px; reduce to avoid collision */
+    margin-bottom: var(--bridge-gap-bottom);
+  }
+
+  /* If it’s still tight, also shrink the avatar a touch: */
+  /* .sam-duffy-page .profile-bridge,
+     .rune-de-leon-page .profile-bridge { --avatar-size: 180px; } */
+}
