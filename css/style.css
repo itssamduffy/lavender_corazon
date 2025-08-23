@@ -171,54 +171,54 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 }
 .small-note { font-size: 0.85rem; color: var(--color-text-light); margin-top: calc(var(--spacing-unit) * 0.75); }
 
-/*Portfolio section*/
-.series-carousel {
-  margin: 2rem 0;
+/* ---- Portfolio / Carousel (natural aspect, bounded height) ---- */
+.series-carousel { margin: 2rem 0; }
+
+.series-carousel .snap-row{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  gap:1rem;
+  padding:0 1rem;
+  align-items:center;          /* vertically center different heights */
 }
 
-.series-carousel .snap-row {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 1rem;
-  padding: 0 1rem;
+.series-carousel .card{
+  flex:0 0 auto;               /* size to content; no forced width */
+  scroll-snap-align:center;
 }
 
-.series-carousel .card {
-  min-width: clamp(320px, 80vw, 1100px);
-  scroll-snap-align: center;
-  position: relative;
+/* The clickable frame sizes to the image */
+.card-hero{
+  position:relative;
+  display:inline-block;
+  padding:0;
+  border:none;
+  background:transparent;      /* no letterbox fill */
+  border-radius:16px;
+  overflow:hidden;             /* keeps caption inside rounded corners */
+  cursor:pointer;
 }
 
-.card-hero {
-  display: block;
-  position: relative;
-  width: 100%;
-  border: none;
-  background: #111;          /* shows behind letterboxed areas */
-  padding: 0;
-  cursor: pointer;
-  border-radius: 16px;        /* move radius here */
-  overflow: hidden;           /* clip caption to rounded corners */
+/* KEY: cap height, keep aspect, width auto */
+.card-hero img{
+  display:block;
+  height:min(28vh, 520px);     /* ~20–30% of screen; adjust to taste */
+  width:auto;                  /* scale proportionally */
+  max-width:92vw;              /* don’t exceed viewport on small screens */
+  border-radius:inherit;
 }
 
-.card-hero img {
-  display: block;
-  max-height: 30vh;   /* cap tallest image to ~30% of viewport height */
-  width: auto;        /* keep width in proportion */
-  height: auto;
-  margin: 0 auto;     /* center horizontally if narrower than card */
-}
-
-.card-caption {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  background: rgba(0,0,0,.55);
-  color: #fff;
-  padding: .5rem .75rem;
-  border-radius: .5rem;
-  font: 600 0.95rem/1.2 "Work Sans", system-ui;
+/* Caption */
+.card-caption{
+  position:absolute;
+  left:.75rem;
+  bottom:.75rem;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:.45rem .7rem;
+  border-radius:.5rem;
+  font:600 .95rem/1.2 "Work Sans", system-ui;
 }
 
 
