@@ -185,7 +185,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 }
 
 .series-carousel .card {
-  min-width: clamp(320px, 80vw, 1100px); /* each card takes a chunk of width */
+  min-width: clamp(320px, 80vw, 1100px);
   scroll-snap-align: center;
   position: relative;
 }
@@ -195,17 +195,19 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
   position: relative;
   width: 100%;
   border: none;
-  background: none;
+  background: #111;          /* shows behind letterboxed areas */
   padding: 0;
   cursor: pointer;
+  border-radius: 16px;        /* move radius here */
+  overflow: hidden;           /* clip caption to rounded corners */
 }
 
 .card-hero img {
   display: block;
-  width: 100%;     /* scale image to card width */
-  height: auto;    /* keep original aspect ratio */
-  object-fit: contain;
-  border-radius: 16px;
+  width: 100%;
+  height: auto;               /* keep original aspect ratio */
+  /* object-fit: contain;     <- not needed with height:auto */
+  /* border-radius: 16px;     <- remove; handled by container */
 }
 
 .card-caption {
