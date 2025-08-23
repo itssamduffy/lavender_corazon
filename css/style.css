@@ -204,7 +204,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 /* KEY: cap height, keep aspect, width auto */
 .card-hero img{
   display:block;
-  height:min(28vh, 520px);     /* ~20–30% of screen; adjust to taste */
+  height:min(36vh, 640px);     /* ~20–30% of screen; adjust to taste */
   width:auto;                  /* scale proportionally */
   max-width:92vw;              /* don’t exceed viewport on small screens */
   border-radius:inherit;
