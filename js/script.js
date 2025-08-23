@@ -259,3 +259,62 @@ document.addEventListener('DOMContentLoaded', function() {
     setupContactForm('contact-form-sam', 'Sam Duffy', 'altforduffy@gmail.com');
     setupContactForm('contact-form-rune', 'Rune Soto Ponce', 'rune@lavendercorazon.com'); // Example email
 });
+
+
+(function(){
+  const dlg   = document.getElementById('portfolio-lightbox');
+  const imgEl = document.getElementById('lb-img');
+  const capEl = document.getElementById('lb-cap');
+  const prev  = dlg.querySelector('.lb-prev');
+  const next  = dlg.querySelector('.lb-next');
+  const close = dlg.querySelector('.lb-close');
+
+  // Build an array from your existing carousel
+  const cards = Array.from(document.querySelectorAll('.series-carousel .card'));
+  const items = cards.map(card => {
+    const img = card.querySelector('img');
+    const cap = card.querySelector('.card-caption')?.textContent.trim() || '';
+    return { src: img.currentSrc || img.src, alt: img.alt || '', cap };
+  });
+
+  let i = 0;
+  const mod = (n, m) => (n % m + m) % m;
+
+  function render(){
+    const it = items[i];
+    imgEl.src = it.src;
+    imgEl.alt = it.alt;
+    capEl.textContent = it.cap;
+    // Preload neighbors for snappy nav
+    [-1, 1].forEach(d => { const j = mod(i + d, items.length); new Image().src = items[j].src; });
+  }
+
+  function openAt(index){
+    i = index;
+    render();
+    dlg.showModal();
+    close.focus();
+  }
+
+  // Click to open
+  cards.forEach((card, idx) => {
+    card.querySelector('.card-hero')?.addEventListener('click', () => openAt(idx));
+  });
+
+  // Controls
+  prev.addEventListener('click', () => { i = mod(i-1, items.length); render(); });
+  next.addEventListener('click', () => { i = mod(i+1, items.length); render(); });
+  close.addEventListener('click', () => dlg.close());
+
+  // Keyboard
+  dlg.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { i = mod(i-1, items.length); render(); }
+    if (e.key === 'ArrowRight') { i = mod(i+1, items.length); render(); }
+    if (e.key === 'Escape')     { dlg.close(); }
+  });
+
+  // Click backdrop to close
+  dlg.addEventListener('click', (e) => {
+    if (e.target === dlg) dlg.close();
+  });
+})();
