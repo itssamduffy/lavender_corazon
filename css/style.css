@@ -370,7 +370,7 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   --bridge-gap-bottom: 28px;  /* circle → About heading */
 }
 
-/* same size + same vertical nudge on both pages */
+/* Same size + same vertical nudge on both pages */
 .sam-duffy-page .profile-bridge,
 .rune-de-leon-page .profile-bridge{
   --avatar-size: 200px;
@@ -378,25 +378,30 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   margin-bottom: var(--bridge-gap-bottom);
 }
 
-/* remove default bottom padding from the intro sections */
+/* Remove default bottom border on the intro & about sections (both pages) */
 #portfolio-intro-sam,
-#portfolio-intro-rune{
-  padding-bottom: 0;
+#portfolio-intro-rune,
+#about,                /* Sam */
+#about-sam,            /* if you ever bring it back */
+#about-rune{           /* Rune */
+  border-bottom: none;
+  padding-bottom: 0;   /* kill extra space under the intro sections */
 }
 
-/* subtitle → circle spacing */
+/* Subtitle → circle spacing */
 .portfolio-tagline{
   margin-bottom: var(--bridge-gap-top);
 }
 
-/* circle → About spacing */
+/* Circle → About spacing (both pages) */
+#about,
 #about-sam,
 #about-rune{
   padding-top: 0;
   margin-top: var(--bridge-gap-bottom);
 }
 
-/* enforce identical circle geometry on both pages */
+/* Enforce identical circle geometry */
 .sam-duffy-page .profile-avatar,
 .rune-de-leon-page .profile-avatar{
   width: var(--avatar-size);
@@ -412,16 +417,14 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   display: block;
 }
 
-/* --- Mobile spacing: keep the circle from overlapping the About heading --- */
+/* --- Mobile: add a bit more space so the circle doesn't collide with "About" --- */
 @media (max-width: 640px){
   :root{
-    --bridge-gap-top: 8px;          /* subtitle → circle */
-    --bridge-gap-bottom: 44px;      /* circle → About (more space on phones) */
+    --bridge-gap-top: 8px;
+    --bridge-gap-bottom: 44px;
   }
-
-  /* ease the upward nudge on phones */
   .sam-duffy-page .profile-bridge,
   .rune-de-leon-page .profile-bridge{
-    margin-top: -4px;               /* was -10px; reduce to avoid collision */
-    margin-bottom: var(--bridge-gap-bottom);
+    margin-top: -4px;  /* slightly less aggressive on phones */
   }
+}
