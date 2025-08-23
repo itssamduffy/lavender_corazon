@@ -370,7 +370,7 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   --bridge-gap-bottom: 28px;  /* circle → About heading */
 }
 
-/* Same size + same vertical nudge on both pages */
+/* Same avatar size + vertical nudge on both pages */
 .sam-duffy-page .profile-bridge,
 .rune-de-leon-page .profile-bridge{
   --avatar-size: 200px;
@@ -378,14 +378,11 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   margin-bottom: var(--bridge-gap-bottom);
 }
 
-/* Remove default bottom border on the intro & about sections (both pages) */
+/* Remove default bottom border/padding on the intro sections */
 #portfolio-intro-sam,
-#portfolio-intro-rune,
-#about,                /* Sam */
-#about-sam,            /* if you ever bring it back */
-#about-rune{           /* Rune */
+#portfolio-intro-rune{
   border-bottom: none;
-  padding-bottom: 0;   /* kill extra space under the intro sections */
+  padding-bottom: 0;
 }
 
 /* Subtitle → circle spacing */
@@ -393,15 +390,16 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   margin-bottom: var(--bridge-gap-top);
 }
 
-/* Circle → About spacing (both pages) */
-#about,
-#about-sam,
-#about-rune{
+/* Circle → About spacing (both pages) + kill border */
+#about,                /* Sam */
+#about-sam,            /* legacy id if used */
+#about-rune{           /* Rune */
+  border-bottom: none;
   padding-top: 0;
   margin-top: var(--bridge-gap-bottom);
 }
 
-/* Enforce identical circle geometry */
+/* Enforce circle geometry */
 .sam-duffy-page .profile-avatar,
 .rune-de-leon-page .profile-avatar{
   width: var(--avatar-size);
@@ -417,7 +415,16 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   display: block;
 }
 
-/* --- Mobile: add a bit more space so the circle doesn't collide with "About" --- */
+/* ---- Rune-only finetune (leave Sam exactly as-is) ---- */
+.rune-de-leon-page .portfolio-tagline { margin-bottom: 6px; }
+.rune-de-leon-page .profile-bridge{
+  margin-top: -10px;                 /* match Sam’s pull-up */
+  margin-bottom: 28px;               /* same gap before About */
+}
+#portfolio-intro-rune { padding-bottom: 0; }
+#about-rune { padding-top: 0; margin-top: 28px; }
+
+/* --- Mobile: add space so the circle never collides with “About” --- */
 @media (max-width: 640px){
   :root{
     --bridge-gap-top: 8px;
@@ -425,6 +432,6 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
   }
   .sam-duffy-page .profile-bridge,
   .rune-de-leon-page .profile-bridge{
-    margin-top: -4px;  /* slightly less aggressive on phones */
+    margin-top: -4px;                /* gentler nudge on phones */
   }
 }
