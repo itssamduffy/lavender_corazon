@@ -202,13 +202,18 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 }
 
 /* KEY: cap height, keep aspect, width auto */
-.card-hero img{
-  display:block;
-  height:min(36vh, 640px);     /* ~20–30% of screen; adjust to taste */
-  width:auto;                  /* scale proportionally */
-  max-width:92vw;              /* don’t exceed viewport on small screens */
-  border-radius:inherit;
+.card-hero img {
+  display: block;
+  height: clamp(420px, 45vh, 840px); /* bigger: ~45% of screen, with floor/ceiling */
+  width: auto;
+  max-width: min(96vw, 1200px);      /* let it get wider but not past the viewport */
+  border-radius: inherit;
 }
+
+@media (max-width: 600px){
+  .card-hero img { height: clamp(300px, 55vh, 700px); } /* larger on phones */
+}
+
 
 /* Caption */
 .card-caption{
