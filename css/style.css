@@ -434,3 +434,27 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
     margin-top: -4px;                /* gentler nudge on phones */
   }
 }
+
+/* --- Nudge both profile circles up a bit more --- */
+:root{
+  --bridge-nudge: -22px;   /* desktop/tablet pull-up */
+}
+
+.sam-duffy-page .profile-bridge,
+.rune-de-leon-page .profile-bridge{
+  margin-top: var(--bridge-nudge);
+}
+
+/* Mobile: smaller pull-up so it doesn't collide with "About" */
+@media (max-width: 640px){
+  :root{
+    --bridge-nudge: -12px;   /* phone pull-up */
+    --bridge-gap-bottom: 48px; /* a touch more room before About */
+  }
+
+  .sam-duffy-page .profile-bridge,
+  .rune-de-leon-page .profile-bridge{
+    margin-top: var(--bridge-nudge);
+    margin-bottom: var(--bridge-gap-bottom);
+  }
+}
