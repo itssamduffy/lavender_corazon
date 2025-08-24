@@ -458,3 +458,17 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
     margin-bottom: var(--bridge-gap-bottom);
   }
 }
+
+/* FINAL OVERRIDE: pull both circles up a bit more */
+.sam-duffy-page .profile-bridge,
+.rune-de-leon-page .profile-bridge {
+  margin-top: -22px;            /* was -10px */
+}
+
+/* Phone: smaller pull-up to avoid collisions */
+@media (max-width: 640px){
+  .sam-duffy-page .profile-bridge,
+  .rune-de-leon-page .profile-bridge {
+    margin-top: -12px;
+  }
+}
