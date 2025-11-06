@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateFooterYear();
     
     // Setup contact forms for specific pages
-    setupContactForm('contact-form-sam', 'Sam Duffy', 'altforduffy@gmail.com');
+    setupContactForm('contact-form-sam', 'Sam Duffy', 'sduffy@lavendercorazon.com');
     setupContactForm('contact-form-rune', 'Rune Soto Ponce', 'rune@lavendercorazon.com'); // Example email
 });
 
