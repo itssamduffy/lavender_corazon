@@ -101,8 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function loadEntries() {
         const entriesContainers = [
-            { id: 'entries-container-sam', jsonFile: 'data/sam-entries.json', artist: 'Sam Duffy' },
-            { id: 'entries-container-rune', jsonFile: 'data/rune-entries.json', artist: 'Rune Soto Ponce' }
+            { id: 'entries-container-sam', jsonFile: 'data/autumn-entries.json', artist: 'Autumn de León' },
+            { id: 'entries-container-rune', jsonFile: 'data/rune-entries.json', artist: 'Rune de León' }
         ];
 
         entriesContainers.forEach(containerConfig => {
@@ -256,8 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
     updateFooterYear();
     
     // Setup contact forms for specific pages
-    setupContactForm('contact-form-sam', 'Sam Duffy', 'sduffy@lavendercorazon.com');
-    setupContactForm('contact-form-rune', 'Rune Soto Ponce', 'rune@lavendercorazon.com'); // Example email
+    setupContactForm('contact-form-sam', 'Autumn de León', 'sduffy@lavendercorazon.com');
+    setupContactForm('contact-form-rune', 'Rune de León', 'rune@lavendercorazon.com'); // Example email
 });
 
 

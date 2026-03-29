@@ -458,7 +458,7 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 }
 
 /* Same avatar size + vertical nudge on both pages */
-.sam-duffy-page .profile-bridge,
+.autumn-page .profile-bridge,
 .rune-de-leon-page .profile-bridge{
   --avatar-size: 200px;
   margin-top: -10px;                      /* pull circle closer to subtitle */
@@ -487,14 +487,14 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 }
 
 /* Enforce circle geometry */
-.sam-duffy-page .profile-avatar,
+.autumn-page .profile-avatar,
 .rune-de-leon-page .profile-avatar{
   width: var(--avatar-size);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
 }
-.sam-duffy-page .profile-avatar img,
+.autumn-page .profile-avatar img,
 .rune-de-leon-page .profile-avatar img{
   width: 100%;
   height: 100%;
