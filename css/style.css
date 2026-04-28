@@ -34,7 +34,7 @@
     --box-shadow-letterpress-inset: inset 0 1px 2px rgba(0,0,0,0.07);
 }
 
-/* Global Resets & Base Styles - (Same as before, truncated for brevity in this view) */
+/* Global Resets & Base Styles - (autumne as before, truncated for brevity in this view) */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 100%; }
 body {
@@ -216,14 +216,14 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
   display: block;
 }
 
-/* Normalize intro → bridge → about (Sam = Rune) */
+/* Normalize intro → bridge → about (autumn = Rune) */
 :root {
   --bridge-gap-top: 1.5rem;
   --bridge-gap-bottom: 2rem;
 }
 
-/* Same avatar size + spacing on both pages */
-.sam-duffy-page .profile-bridge,
+/* autumne avatar size + spacing on both pages */
+.autumn-duffy-page .profile-bridge,
 .rune-de-leon-page .profile-bridge {
   --avatar-size: 200px;
   margin-top: var(--bridge-gap-top);
@@ -231,7 +231,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 }
 
 /* Remove default bottom border/padding on intro sections */
-#portfolio-intro-sam,
+#portfolio-intro-autumn,
 #portfolio-intro-rune {
   border-bottom: none;
   padding-bottom: 0;
@@ -245,7 +245,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 
 /* Circle → About spacing (both pages) + kill border */
 #about,
-#about-sam,
+#about-autumn,
 #about-rune {
   border-bottom: none;
   padding-top: 0;
@@ -253,7 +253,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 }
 
 /* Enforce circle geometry */
-.sam-duffy-page .profile-avatar,
+.autumn-duffy-page .profile-avatar,
 .rune-de-leon-page .profile-avatar {
   width: var(--avatar-size);
   aspect-ratio: 1 / 1;
@@ -261,7 +261,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
   overflow: hidden;
 }
 
-.sam-duffy-page .profile-avatar img,
+.autumn-duffy-page .profile-avatar img,
 .rune-de-leon-page .profile-avatar img {
   width: 100%;
   height: 100%;
@@ -276,7 +276,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
     margin: 1.5rem auto 1.5rem;
   }
   
-  .sam-duffy-page .profile-bridge,
+  .autumn-duffy-page .profile-bridge,
   .rune-de-leon-page .profile-bridge {
     --avatar-size: 160px;
   }
@@ -288,7 +288,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
     margin: 1rem auto 1rem;
   }
   
-  .sam-duffy-page .profile-bridge,
+  .autumn-duffy-page .profile-bridge,
   .rune-de-leon-page .profile-bridge {
     --avatar-size: 140px;
   }
@@ -296,7 +296,7 @@ section h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 
 
 /* Remove the default section borders so you don’t get double lines */
 #portfolio-intro-rune, #about-rune { border-bottom: none; }
-#portfolio-intro-sam, #about-sam { border-bottom: none; }
+#portfolio-intro-autumn, #about-autumn { border-bottom: none; }
 
 
 /* ---- Portfolio / Carousel (natural aspect, bounded height) ---- */
@@ -443,21 +443,21 @@ footer { text-align: center; padding: calc(var(--spacing-unit) * 2.5) var(--spac
 footer a { color: var(--color-primary-accent); border-bottom: 1px dotted var(--color-primary-accent); }
 footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: var(--color-primary-accent-hover); }
 
-/* Responsive Adjustments - (Same as before, truncated) */
+/* Responsive Adjustments - (autumne as before, truncated) */
 @media (max-width: 900px) { :root { --header-height: 70px; } h1 { font-size: 2.3rem; } .site-title-main { font-size: 3rem; } .portfolio-intro h1 { font-size: 2.5rem; } h2 { font-size: 1.9rem; } h3 { font-size: 1.5rem; } .entries-container .entry-preview { flex-direction: column; } .entries-container .entry-preview img { width: 100%; max-width: 250px; margin-bottom: var(--spacing-unit); } }
 @media (max-width: 768px) { #main-header nav ul { display: none; position: absolute; top: var(--header-height); left: 0; width: 100%; background-color: var(--color-primary-accent); flex-direction: column; align-items: center; padding: var(--spacing-unit) 0; box-shadow: var(--box-shadow-medium); border-top: 1px solid rgba(255,255,255,0.05); } #main-header nav ul.is-active { display: flex; } #main-header nav ul li { margin: calc(var(--spacing-unit) * 0.5) 0; width: 100%; text-align: center; } #main-header nav ul li a { display: block; padding: calc(var(--spacing-unit) * 0.75) 0; width: 100%; } #main-header nav ul li a::after { bottom: 8px; } #menu-toggle { display: block; } #menu-toggle.is-active .hamburger-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); } #menu-toggle.is-active .hamburger-bar:nth-child(2) { opacity: 0; } #menu-toggle.is-active .hamburger-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); } .content-column { margin-top: var(--spacing-unit); margin-bottom: var(--spacing-unit); } section { padding: var(--spacing-unit) 0; } }
 @media (max-width: 480px) { html { font-size: 93.75%; } #main-header .logo a { font-size: 1.5rem; } h1 { font-size: 2rem; } .site-title-main { font-size: 2.5rem; } .portfolio-intro h1 { font-size: 2.2rem; } h2 { font-size: 1.7rem; } h3 { font-size: 1.4rem; } .button { padding: 10px 20px; font-size: 0.9rem; } .entries-container .entry-preview .read-more { padding: 6px 12px; font-size: 0.8rem; } .lavender-corazon-home .portfolio-link-card { padding: var(--spacing-unit); } }
-/* Print styles - (Same as before, truncated) */
+/* Print styles - (autumne as before, truncated) */
 @media print { body { padding-top: 0; background-color: var(--color-white); color: #000; } #main-header, footer, .contact-form button, .button, #menu-toggle { display: none; } .content-column, section { border: none; margin: 0; padding: 0; box-shadow: none; opacity: 1; transform: none; } a { color: #000; text-decoration: underline; } a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; } .entries-container .entry-preview img { max-width: 150px; } section h2::after { background-color: #000; } }
 
 
-/* --- Normalize intro ↔ bridge ↔ about (Sam = Rune) --- */
+/* --- Normalize intro ↔ bridge ↔ about (autumn = Rune) --- */
 :root{
   --bridge-gap-top: 6px;      /* subtitle → circle */
   --bridge-gap-bottom: 28px;  /* circle → About heading */
 }
 
-/* Same avatar size + vertical nudge on both pages */
+/* autumne avatar size + vertical nudge on both pages */
 .autumn-page .profile-bridge,
 .rune-de-leon-page .profile-bridge{
   --avatar-size: 200px;
@@ -466,7 +466,7 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 }
 
 /* Remove default bottom border/padding on the intro sections */
-#portfolio-intro-sam,
+#portfolio-intro-autumn,
 #portfolio-intro-rune{
   border-bottom: none;
   padding-bottom: 0;
@@ -478,8 +478,8 @@ footer a:hover { color: var(--color-primary-accent-hover); border-bottom-color: 
 }
 
 /* Circle → About spacing (both pages) + kill border */
-#about,                /* Sam */
-#about-sam,            /* legacy id if used */
+#about,                /* autumn */
+#about-autumn,            /* legacy id if used */
 #about-rune{           /* Rune */
   border-bottom: none;
   padding-top: 0;
